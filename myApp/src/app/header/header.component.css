@@ -1,0 +1,61 @@
+.aa-header-bottom {
+    float: left;
+    display: inline;
+    width: 100%;
+    padding: 20px 0;
+}
+.aa-header-bottom .aa-header-bottom-area .aa-logo a > span {
+    display: inline-block;
+    float: left;
+    font-size: 50px;
+}
+
+.aa-header-bottom .aa-header-bottom-area .aa-logo a p {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+
+.aa-header-bottom .aa-header-bottom-area .aa-search-box {
+    float: right;
+    margin-right: 5%;
+    margin-top: 13px;
+    position: relative;
+    width: 500px;
+}
+
+.aa-header-bottom .aa-header-bottom-area .aa-logo a {
+    font-family: "Raleway", sans-serif;
+    font-size: 28px;
+    color: #333333;
+}
+
+.aa-header-bottom .aa-header-bottom-area .aa-logo a > span {
+    display: inline-block;
+    float: left;
+    font-size: 50px;
+    color: #ff6666;
+}
+
+.aa-header-bottom .aa-header-bottom-area .aa-logo a p {
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+.aa-header-bottom .aa-header-bottom-area .aa-logo a p span {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.aa-header-bottom .aa-header-bottom-area .aa-logo a strong {
+    color: #ff6666;
+}

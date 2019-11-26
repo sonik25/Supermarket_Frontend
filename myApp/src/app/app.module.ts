@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { TopheaderComponent } from './topheader/topheader.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { LoginComponent } from './login/login.component';
+import {FormsModule , ReactiveFormsModule} from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,15 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     TopheaderComponent,
     MyaccountComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
