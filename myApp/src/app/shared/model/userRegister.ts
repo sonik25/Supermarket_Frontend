@@ -1,6 +1,6 @@
 export interface IuserRegister{
-    FirstName:string;
-    LastName:string;
+    firstName:string;
+    lastName:string;
     newsLetterCheck:boolean;
     UserLogin:{
         userEmail:string;

@@ -3,4 +3,7 @@ export interface IuserLogin{
         userEmail:string;
         userPassword:string;
     }
+    t?:string;
+    error?:any;
+    message?:string;
 }

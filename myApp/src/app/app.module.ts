@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { HomeComponent } from './home/home.component';
 import { TopheaderComponent } from './topheader/topheader.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { MyaccountComponent } from './myaccount/myaccount.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
@@ -27,7 +29,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
