@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { Product } from './product.list/product.list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavigationComponent } from './navigation/navigation.component';
     MyaccountComponent,
     LoginComponent,
     HeaderComponent,
-    NavigationComponent
+    NavigationComponent,
+    Product.ListComponent
   ],
   imports: [
     BrowserModule,
