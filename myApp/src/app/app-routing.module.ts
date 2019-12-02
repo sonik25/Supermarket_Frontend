@@ -2,6 +2,7 @@ import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MyaccountComponent } from './myaccount/myaccount.component';
+import {ProductListComponent} from './product.list/product.list.component';
 import {AuthGuard} from './authguard/auth';
 
 const routes: Routes = [{
@@ -17,6 +18,10 @@ const routes: Routes = [{
 {
   path:'myaccount',
   component:MyaccountComponent
+},
+{
+  path:'allproducts',
+  component:ProductListComponent
 }];
 
 @NgModule({
