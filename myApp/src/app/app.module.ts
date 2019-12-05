@@ -14,6 +14,7 @@ import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProductListComponent } from './product.list/product.list.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductListComponent } from './product.list/product.list.component';
     LoginComponent,
     HeaderComponent,
     NavigationComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductdetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,41 @@
 #menu {
-    display: inline;
-    float: left;
-    width: 100%;
+  display: inline;
+  float: left;
+  width: 100%;
 }
+
+#menu .menu-area .navbar .navbar-nav {
+  margin: 0;
+  text-align: center;
+  padding: 0px 15px;
+}
+
 #menu .menu-area .navbar-default .navbar-nav li a {
-    color: #fff;
-    font-size: 16px;
-    padding: 10px 15px;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#menu .menu-area .navbar-default .navbar-nav li a:hover {
+  background: #fff;
+  color: #ff6666;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  padding: 0px;
+}
+
+#menu .menu-area .navbar-default .navbar-nav li a.dropdown-item {
+  color: #ff6666;
+}
+
+#menu .menu-area .navbar-default .navbar-nav li a.dropdown-item:hover {
+  background: #ff6666;
+  color: #fff;
 }
