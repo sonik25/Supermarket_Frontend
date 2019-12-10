@@ -22,11 +22,11 @@ const routes: Routes = [
     component: MyaccountComponent
   },
   {
-    path: "allproducts/:page",
+    path: "allproducts",
     component: ProductListComponent
   },
   {
-    path: "category/:id/:page",
+    path: "category/:id",
     component: ProductListComponent
   },
   {

@@ -9,13 +9,13 @@ import * as opt from "rxjs/operators";
 @Injectable({ providedIn: "root" })
 export class ProductServices {
   public productList: string =
-    "http://localhost:4700/api/supermarket/allProduct/page/:pageIndex";
+    "http://localhost:4700/api/supermarket/allProduct";
   public categoryList: string =
     "http://localhost:4700/api/supermarket/allCategory";
   public subcategoryList: string =
     "http://localhost:4700/api/supermarket/allSubCategory";
   public cateProdList: string =
-    "http://localhost:4700/api/supermarket/category/:id/page/:pageIndex";
+    "http://localhost:4700/api/supermarket/category/";
   public subCateProdList: string =
     "http://localhost:4700/api/supermarket/category/:id/subcategory/:subid/page/:pageIndex";
 
@@ -33,8 +33,8 @@ export class ProductServices {
     return this.http.get<IproductInfo[]>(this.productList);
   }
 
-  CategoryProductList(): Observable<IproductInfo[]> {
-    return this.http.get<IproductInfo[]>(this.cateProdList);
+  CategoryProductList(id: number): Observable<IproductInfo[]> {
+    return this.http.get<IproductInfo[]>(this.cateProdList + id);
   }
   SubCategoryProductList(): Observable<IproductInfo[]> {
     return this.http.get<IproductInfo[]>(this.subCateProdList);
