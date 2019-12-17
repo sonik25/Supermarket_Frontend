@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-md-4 col-md-4 aa-myaccount-area">
+      <div class="aa-myaccount-login">
+        <h4>Forgot Password</h4>
+
+        <form
+          class="aa-login-form"
+          [formGroup]="ForgotPasswordMail"
+          (ngSubmit)="Check(ForgotPasswordMail.value)"
+        >
+          <div formGroupName="UserLogin">
+            <div class="form-group">
+              Username or Email address<span class="text-danger">*</span>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="userEmail"
+                placeholder="Username or email"
+                [class.is-valid]="
+                  ForgotPasswordMail.controls.UserLogin.controls.userEmail.valid
+                "
+                [class.is-invalid]="
+                  !ForgotPasswordMail.controls.UserLogin.controls.userEmail
+                    .valid && submitted
+                "
+              />
+              <div class="invalid-feedback">
+                Please correct Username or Email
+              </div>
+            </div>
+          </div>
+          <div class="text-left">
+            <button type="submit" class="aa-browse-btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

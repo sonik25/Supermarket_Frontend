@@ -28,16 +28,30 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.productServices.ProductList().subscribe(data => {
       this.prodData = data;
-      console.log(data);
+      // console.log(data);
     });
     // let d = localStorage.getItem("product");
     // console.log("sdfdfdfdsfd", d);
     this.AR.params.subscribe(item => {
       let id = item["id"];
-      console.log(id);
+      // console.log(id);
       this.productServices.CategoryProductList(id).subscribe((item: any) => {
-        console.log(item.dataSize);
+        this.prodData = item.dataSize;
+        // console.log(item.dataSize);
       });
+    });
+
+    this.AR.params.subscribe(data => {
+      let catid = data["catid"];
+      console.log(catid);
+      let subid = data["subid"];
+      console.log(subid);
+      this.productServices
+        .SubCategoryProductList(catid, subid)
+        .subscribe((item: any) => {
+          this.prodData = item.dataSize;
+          console.log(item.dataSize);
+        });
     });
   }
 }

@@ -84,7 +84,7 @@ export class RegistrationComponent implements OnInit {
       item => {
         console.log(item);
         alert("Registration successfull !!!");
-        this.router.navigateByUrl("/home");
+        this.router.navigateByUrl("/login");
       },
       error => {
         alert(error.error.message);

@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ProductServices } from "../shared/services/product.services";
 
 @Component({
@@ -10,10 +10,14 @@ import { ProductServices } from "../shared/services/product.services";
 export class ProductdetailsComponent implements OnInit {
   public productId: any;
   public productDetails: any;
+  public quantity: number = 1;
+
+  public quantities = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   constructor(
     private productService: ProductServices,
-    private AR: ActivatedRoute
+    private AR: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -24,5 +28,19 @@ export class ProductdetailsComponent implements OnInit {
         console.log(data);
       });
     });
+  }
+
+  ChangingValue(item: any) {
+    this.quantity = item.target.value;
+    console.log(this.quantity);
+  }
+
+  AddCartProduct(item: any) {
+    let d = {
+      i: item,
+      q: this.quantity
+    };
+    localStorage.setItem("productData", JSON.stringify(d));
+    this.router.navigateByUrl("/cart");
   }
 }

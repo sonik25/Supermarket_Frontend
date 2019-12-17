@@ -42,7 +42,7 @@
               <li class="col-md-3 " *ngFor="let prodInfo of prodData">
                 <figure>
                   <div class="image-box">
-                    <a class="aa-product-img" routerLink=""
+                    <a class="aa-product-img" routerLink="/productdetails/{{ prodInfo._id }}"
                       ><img
                         class="img-fluid"
                         src="{{ prodInfo.image }}"

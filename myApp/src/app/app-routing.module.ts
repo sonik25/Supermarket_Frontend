@@ -5,6 +5,10 @@ import { MyaccountComponent } from "./myaccount/myaccount.component";
 import { ProductListComponent } from "./product.list/product.list.component";
 import { AuthGuard } from "./authguard/auth";
 import { ProductdetailsComponent } from "./productdetails/productdetails.component";
+import { RegistrationComponent } from "./registration/registration.component";
+import { ForgotpasswordComponent } from "./forgotpassword/forgotpassword.component";
+import { CartComponent } from "./cart/cart.component";
+import { ForgotpwdmailerComponent } from "./forgotpwdmailer/forgotpwdmailer.component";
 
 const routes: Routes = [
   {
@@ -22,6 +26,18 @@ const routes: Routes = [
     component: MyaccountComponent
   },
   {
+    path: "register",
+    component: RegistrationComponent
+  },
+  {
+    path: "forgotpassword/:id",
+    component: ForgotpasswordComponent
+  },
+  {
+    path: "forgotpasswordmailer",
+    component: ForgotpwdmailerComponent
+  },
+  {
     path: "allproducts",
     component: ProductListComponent
   },
@@ -30,12 +46,16 @@ const routes: Routes = [
     component: ProductListComponent
   },
   {
-    path: "category/:id/subcategory/:id/:page",
+    path: "category/:catid/subcategory/:subid",
     component: ProductListComponent
   },
   {
     path: "productdetails/:id",
     component: ProductdetailsComponent
+  },
+  {
+    path: "cart",
+    component: CartComponent
   }
 ];
 

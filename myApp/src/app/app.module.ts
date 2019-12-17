@@ -15,6 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ProductListComponent } from './product.list/product.list.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { CartComponent } from './cart/cart.component';
+import { ForgotpwdmailerComponent } from './forgotpwdmailer/forgotpwdmailer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { ProductdetailsComponent } from './productdetails/productdetails.compone
     HeaderComponent,
     NavigationComponent,
     ProductListComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    ForgotpasswordComponent,
+    CartComponent,
+    ForgotpwdmailerComponent
   ],
   imports: [
     BrowserModule,

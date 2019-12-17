@@ -632,3 +632,10 @@ h2 {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+
+.aa-myaccount-login {
+  border: 1px solid #b2afaf;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+}

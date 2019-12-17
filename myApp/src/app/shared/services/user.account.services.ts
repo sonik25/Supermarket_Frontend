@@ -13,7 +13,11 @@ export class UserAccountService {
   private RegisterEndPoint: string =
     "http://localhost:4700/api/supermarket/userRegister";
   private LoginEndpoint: string = "http://localhost:4700/api/supermarket/login";
-  private forgotPwdEndpoint: string = "http://localhost:4700/api/supermarket";
+  private forgotPwdEndpoint: string =
+    "http://localhost:4700/api/supermarket/forgotpassword/";
+
+  private forgotMailer: string =
+    "http://localhost:4700/api/supermarket/forgotpassword/mailer";
 
   public header: HttpHeaders;
 
@@ -53,6 +57,25 @@ export class UserAccountService {
         })
       );
   }
+
+  userForgotMail(data: any): Observable<IuserLogin> {
+    alert(JSON.stringify(data));
+    return this.http.post<IuserLogin>(this.forgotMailer, JSON.stringify(data), {
+      headers: this.header
+    });
+  }
+
+  userForgot(data: any, id: any): Observable<IuserLogin> {
+    alert(JSON.stringify(data));
+    return this.http.post<IuserLogin>(
+      this.forgotPwdEndpoint + id,
+      JSON.stringify(data),
+      {
+        headers: this.header
+      }
+    );
+  }
+
   userLogout() {
     localStorage.removeItem("currentUser");
     this.loggedIn.next(null);

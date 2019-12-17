@@ -21,6 +21,9 @@
                 <a
                   class="dropdown-item"
                   *ngFor="let subcatInfo of catInfo.subCategory"
+                  routerLink="/category/{{ catInfo._id }}/subcategory/{{
+                    subcatInfo._id
+                  }}"
                   >{{ subcatInfo.name }}</a
                 >
               </div>
